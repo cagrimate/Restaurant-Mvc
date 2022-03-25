@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "Malzeme Düzenle";
+}
+<div class="m-5">
+    <form asp-action="MalzemeDuzenle" method="post">
+        <input type="number" name="urunId"
+               value="@((int)Model)" hidden />
+        <div class="form-group">
+            <label for="ids">Malzemeler</label>
+            <select size="10" class="custom-select custom-select-lg" name="ids" id="ids"
+                    asp-items="ViewBag.Malzemeler" multiple></select>
+        </div>
+        <button class="btn btn-success">Güncelle</button>
+    </form>
+</div>
